@@ -1,0 +1,4 @@
+M:\COMP_235_InternetDevII\FirstApp\WebApplication1\MovieLibrary\bin\Debug\MovieLibrary.pdb
+M:\COMP_235_InternetDevII\FirstApp\WebApplication1\MovieLibrary\obj\Debug\MovieLibrary.dll
+M:\COMP_235_InternetDevII\FirstApp\WebApplication1\MovieLibrary\obj\Debug\MovieLibrary.pdb
+M:\COMP_235_InternetDevII\FirstApp\WebApplication1\MovieLibrary\obj\Debug\MovieLibrary.csprojResolveAssemblyReference.cache
