@@ -50,6 +50,20 @@ namespace MovieLibrary
             con.Close();
             return movies;
         }
+        public void MovieUpdate(Movies MovieToUpdate)
+        {
+            SqlConnection con = new SqlConnection(Connections.ConnectionString());
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "Update Movies set Title=@Title, Director=@Director, Description=@Description Where ID=@Id";
+            cmd.Parameters.AddWithValue("@Title", MovieToUpdate.Title);
+            cmd.Parameters.AddWithValue("@ID", MovieToUpdate.Id);
+            cmd.Parameters.AddWithValue("@Description", MovieToUpdate.Description);
+            cmd.Parameters.AddWithValue("@Director", MovieToUpdate.Director);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
 
         //public List<MovieCategory> getMovieCategories()
         //{
@@ -80,24 +94,6 @@ namespace MovieLibrary
             SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
             return reader;
         }
-
-        public void updateMovie(int id, string title, string director, string description)
-        {
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = connectionString;
-            SqlCommand cmd = new SqlCommand("Update Movies set Title=@Title, Director=@Director, Description=@Description Where ID=@Id");
-            cmd.Parameters.AddWithValue("Title", title);
-            cmd.Parameters.AddWithValue("ID", id);
-            cmd.Parameters.AddWithValue("Description", description);
-            cmd.Parameters.AddWithValue("Director", director);
-
-            cmd.Connection = con;
-
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
-        }
-
         public void deleteMovie(int id)
         {
             SqlConnection con = new SqlConnection();

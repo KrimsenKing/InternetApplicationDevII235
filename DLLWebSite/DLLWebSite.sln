@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DLLWebSite", ".", "{BA79C3D7-B8CA-456D-A52F-41DE1166E0C7}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50323"
+		Debug.AspNetCompiler.PhysicalPath = "..\DLLWebSite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50323\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50323"
+		Release.AspNetCompiler.PhysicalPath = "..\DLLWebSite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50323\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50323"
+		SlnRelativePath = "..\DLLWebSite\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieLibrary", "..\FirstApp\WebApplication1\MovieLibrary\MovieLibrary.csproj", "{797136EB-EB33-4810-B143-2CC76A450F6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA79C3D7-B8CA-456D-A52F-41DE1166E0C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA79C3D7-B8CA-456D-A52F-41DE1166E0C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA79C3D7-B8CA-456D-A52F-41DE1166E0C7}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA79C3D7-B8CA-456D-A52F-41DE1166E0C7}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{797136EB-EB33-4810-B143-2CC76A450F6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{797136EB-EB33-4810-B143-2CC76A450F6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{797136EB-EB33-4810-B143-2CC76A450F6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{797136EB-EB33-4810-B143-2CC76A450F6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

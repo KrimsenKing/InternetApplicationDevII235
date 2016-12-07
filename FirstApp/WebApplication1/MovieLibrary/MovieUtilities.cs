@@ -13,5 +13,12 @@ namespace MovieLibrary
             MovieData md = new MovieData();
             return md.getMovies();
         }
+
+        public void UpdateMovie(int id, string title, string director, string description)
+        {
+            Movies MovieToUpdate = new Movies(id, title, director, description);
+            MovieData mu = new MovieData();
+            mu.MovieUpdate(MovieToUpdate);
+        }
     }
 }
