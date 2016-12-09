@@ -12,7 +12,7 @@
         <asp:SqlDataSource ID="SqlMovieCats" runat="server" ConnectionString='<%$ ConnectionStrings:dbMovies2ConnectionString %>' SelectCommand="SELECT [Id], [Name] FROM [MovieCategories]"></asp:SqlDataSource>
         <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlMovieCats">
             <ItemTemplate>
-               <a href='Repeater.aspx?id=<%#Eval("id")%>'><%#Eval("Name")%></a>
+               <a href='Repeater.aspx?id=<%#Eval("id")%>'><%#Eval("name")%></a>
             </ItemTemplate>
         </asp:Repeater>
         <asp:SqlDataSource ID="SqlMovies" runat="server" ConnectionString="<%$ ConnectionStrings:dbMovies2ConnectionString %>" SelectCommand="SELECT [Title], [Director], [Description] FROM [Movies] WHERE ([CategoryId] = @CategoryId)">

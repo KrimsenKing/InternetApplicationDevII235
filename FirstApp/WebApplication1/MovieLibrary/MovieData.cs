@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MovieLibrary
 {
-    class MovieData
+    public class MovieData
     {
         public string connectionString;
 
@@ -89,6 +89,28 @@ namespace MovieLibrary
             SqlCommand cmd = new SqlCommand("Select ID, Title, Director, Description From Movies Where CategoryID=@catID");
 
             cmd.Parameters.AddWithValue("catID", catID);
+            cmd.Connection = con;
+            con.Open();
+            SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+            return reader;
+        }
+        public SqlDataReader getMoviesByDirector(string director)
+        {
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = connectionString;
+            SqlCommand cmd = new SqlCommand("Select ID, Title, Director, Description From Movies Where Director=@director");
+            cmd.Parameters.AddWithValue("director", director);
+            cmd.Connection = con;
+            con.Open();
+            SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+            return reader;
+        }
+        public SqlDataReader getMoviesByTitle(string title)
+        {
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = connectionString;
+            SqlCommand cmd = new SqlCommand("Select ID, Title, Director, Description From Movies Where Title=@title");
+            cmd.Parameters.AddWithValue("title", title);
             cmd.Connection = con;
             con.Open();
             SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);

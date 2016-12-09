@@ -15,7 +15,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" DeleteMethod="deleteMovie" SelectMethod="getMoviesBycatID" TypeName="WebApplication1.MovieManager" UpdateMethod="updateMovie" InsertMethod="insertMovie">
+        <asp:ObjectDataSource ID="ObjectDataSource1" DataKeyNames="id" runat="server" DeleteMethod="deleteMovie" SelectMethod="getMoviesBycatID" TypeName="WebApplication1.MovieManager" UpdateMethod="updateMovie" InsertMethod="insertMovie">
             <DeleteParameters>
                 <asp:Parameter Name="id" Type="Int32" />
             </DeleteParameters>
@@ -38,7 +38,7 @@
         <asp:ObjectDataSource ID="ObjectDataSource2" runat="server" SelectMethod="getMovieCategories" TypeName="WebApplication1.MovieManager"></asp:ObjectDataSource>
     <div>
     
-        <asp:GridView ID="GridView1" runat="server" DataKeyNames="id" DataSourceID="ObjectDataSource1">
+        <asp:GridView ID="GridView1" runat="server" DataSourceID="ObjectDataSource1">
             <Columns>
                 <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
             </Columns>
