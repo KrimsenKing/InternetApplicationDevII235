@@ -65,6 +65,20 @@ namespace MovieLibrary
             con.Close();
         }
 
+        public void CategoryUpdate(Categories CategoryToUpdate)
+        {
+            SqlConnection con = new SqlConnection(Connections.ConnectionString());
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "Update MovieCategories set Name=@Name, Position=@Position Where ID=@Id";
+            cmd.Parameters.AddWithValue("@Name", CategoryToUpdate.Name);
+            cmd.Parameters.AddWithValue("@ID", CategoryToUpdate.Id);
+            cmd.Parameters.AddWithValue("@Position", CategoryToUpdate.Position);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
         //public List<MovieCategory> getMovieCategories()
         //{
         //    List<MovieCategory> movies = new List<MovieCategory>();
@@ -111,6 +125,28 @@ namespace MovieLibrary
             con.ConnectionString = connectionString;
             SqlCommand cmd = new SqlCommand("Select ID, Title, Director, Description From Movies Where Title=@title");
             cmd.Parameters.AddWithValue("title", title);
+            cmd.Connection = con;
+            con.Open();
+            SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+            return reader;
+        }
+        public SqlDataReader getMoviesById(int id)
+        {
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = connectionString;
+            SqlCommand cmd = new SqlCommand("Select Id, Title, Director, DateReleased, BoxOfficeTotals, Description From Movies Where Id=@id");
+            cmd.Parameters.AddWithValue("id", id);
+            cmd.Connection = con;
+            con.Open();
+            SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+            return reader;
+        }
+        public SqlDataReader getMovieCategories()
+        {
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = connectionString;
+            SqlCommand cmd = new SqlCommand("Select ID, Name, Position From MovieCategories");
+
             cmd.Connection = con;
             con.Open();
             SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);

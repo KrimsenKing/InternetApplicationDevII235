@@ -9,9 +9,7 @@ namespace MovieLibrary
     {
         public int Id { get; set; }
         public string Title { get; set; }
-
         public string Director { get; set; }
-
         private string _description;
         public string Description
         {
@@ -24,6 +22,8 @@ namespace MovieLibrary
                     value = "No description available";
             }
         }
+        public string DateReleased { get; set; }
+        public int BoxOfficeTotals { get; set; }
         public Movies() {}
 
         public Movies(string title, string director, string description)
@@ -40,6 +40,15 @@ namespace MovieLibrary
             Description = description;
         }
 
+        public Movies(int id, string title, string director, string dateReleased, int boxOfficeTotals, string description)
+        {
+            Id = id;
+            Title = title;
+            Director = director;
+            DateReleased = dateReleased;
+            BoxOfficeTotals = boxOfficeTotals;
+            Description = description;
+        }
     }
 
 

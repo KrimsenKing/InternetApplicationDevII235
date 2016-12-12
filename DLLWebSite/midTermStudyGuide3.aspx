@@ -10,9 +10,9 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:Repeater ID="Repeater1" runat="server" OnPreRender="Page_PreRender">
+        <asp:Repeater ID="Repeater1" runat="server" OnLoad="Page_Load">
             <ItemTemplate>
-               <a href='Repeater.aspx?id=<%#Eval("id")%>'><%#Eval("Title")%></a>
+               <a href='MidTermStudyGuide3.aspx?id=<%#Eval("Id")%>'><%#Eval("Title")%></a>
             </ItemTemplate>
         </asp:Repeater>
     

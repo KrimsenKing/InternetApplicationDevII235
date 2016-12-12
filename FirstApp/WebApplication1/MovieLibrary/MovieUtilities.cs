@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,13 @@ namespace MovieLibrary
             Movies MovieToUpdate = new Movies(id, title, director, description);
             MovieData mu = new MovieData();
             mu.MovieUpdate(MovieToUpdate);
+        }
+
+        public void UpdateCategories(int id, string name, int position)
+        {
+            Categories CategoryToUpdate = new Categories(id, name, position);
+            MovieData mu = new MovieData();
+            mu.CategoryUpdate(CategoryToUpdate);
         }
     }
 }
