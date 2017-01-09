@@ -23,20 +23,24 @@
 </style> 
 
     <script>
-        $(function () {
-            $("#map").goMap(
-                {
-                    latitude: 50.3196,
-                    longitude: -105.5349,
-                    zoom: 6
+     
+            $(document).ready(function () {
+                $("#map").goMap({
+                        latitude: 50.3196,
+                        longitude: -105.5349,
+                        zoom: 4
+                    });
+                num = 0;
+                $(".coord").each(function (index) {
+                    $.goMap.createMarker({
+                        latitude: $(this).text().split("x")[0],
+                        longitude: $(this).text().split("x")[1],
+                        title: 'marker ' + num
+                    });
+                    num++;
                 });
-
-            $.goMap.createMarker({
-                    latitude: 50.3196,
-                    longitude: -105.5349,
-                    id: 'Moose Jaw'
-                })
-        });
+            });
+  
     </script>
 
 </head>
@@ -45,6 +49,7 @@
     <div id="map">
     
     </div>
-    
+    <span class="coord">56.94x-105.7</span>
+    <span class="coord">60.94x-105.7</span>
 </body>
 </html>
