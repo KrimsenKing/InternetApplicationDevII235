@@ -96,6 +96,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AJAX.aspx" />
+    <Content Include="AJAXDemo2.aspx" />
+    <Content Include="AJAXDemoUpdateTriggers.aspx" />
     <Content Include="Calendar.aspx" />
     <Content Include="DataReaderDemo.aspx" />
     <Content Include="DLLConsumer.aspx" />
@@ -138,6 +141,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Address.cs" />
+    <Compile Include="AJAX.aspx.cs">
+      <DependentUpon>AJAX.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AJAX.aspx.designer.cs">
+      <DependentUpon>AJAX.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AJAXDemo2.aspx.cs">
+      <DependentUpon>AJAXDemo2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AJAXDemo2.aspx.designer.cs">
+      <DependentUpon>AJAXDemo2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AJAXDemoUpdateTriggers.aspx.cs">
+      <DependentUpon>AJAXDemoUpdateTriggers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AJAXDemoUpdateTriggers.aspx.designer.cs">
+      <DependentUpon>AJAXDemoUpdateTriggers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Calendar.aspx.cs">
       <DependentUpon>Calendar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
