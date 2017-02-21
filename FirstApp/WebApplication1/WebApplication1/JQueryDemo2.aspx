@@ -6,7 +6,7 @@
 <head runat="server">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
-        var sat = "Lise if good";
+        var sat = "Life if good";
         var sun = "Stay home today";
         var now = new Date().getDay();
 

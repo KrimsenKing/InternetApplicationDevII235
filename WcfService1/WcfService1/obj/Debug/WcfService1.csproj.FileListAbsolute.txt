@@ -1,0 +1,6 @@
+M:\COMP_235_InternetDevII\InternetApplicationDevII235\WcfService1\WcfService1\bin\WcfService1.dll.config
+M:\COMP_235_InternetDevII\InternetApplicationDevII235\WcfService1\WcfService1\bin\WcfService1.dll
+M:\COMP_235_InternetDevII\InternetApplicationDevII235\WcfService1\WcfService1\bin\WcfService1.pdb
+M:\COMP_235_InternetDevII\InternetApplicationDevII235\WcfService1\WcfService1\obj\Debug\WcfService1.csprojResolveAssemblyReference.cache
+M:\COMP_235_InternetDevII\InternetApplicationDevII235\WcfService1\WcfService1\obj\Debug\WcfService1.dll
+M:\COMP_235_InternetDevII\InternetApplicationDevII235\WcfService1\WcfService1\obj\Debug\WcfService1.pdb

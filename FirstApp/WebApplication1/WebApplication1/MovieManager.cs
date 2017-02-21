@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Web;
 using System.Web.Configuration;
+using MovieLibrary;
 
 namespace WebApplication1
 {
@@ -32,23 +33,22 @@ namespace WebApplication1
             return reader;
 
         }
-        //public List<Movies> getMovies()
-        //{
-        //    List<Movies> movies = new List<Movies>();
-        //    SqlConnection con = new SqlConnection();
-        //    con.ConnectionString = connectionString;
-        //    SqlCommand cmd = new SqlCommand("Select ID, Title, Director, Description From Movies");
-
-        //    cmd.Connection = con;
-        //    con.Open();
-        //    SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
-        //    while (reader.Read())
-        //    {
-        //        movies.Add(new Movies(Convert.ToInt32(reader["id"].ToString()), reader["Title"].ToString(), reader["Director"].ToString(), reader["Description"].ToString()));
-        //    }
-        //    con.Close();
-        //    return movies;
-        //}
+        public List<Movies> getMovies()
+        {
+            List<Movies> movies = new List<Movies>();
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = connectionString;
+            SqlCommand cmd = new SqlCommand("Select ID, Title, Director, Description From Movies");
+            cmd.Connection = con;
+            con.Open();
+            SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+            while (reader.Read())
+            {
+                movies.Add(new Movies(Convert.ToInt32(reader["id"].ToString()), reader["Title"].ToString(), reader["Director"].ToString(), reader["Description"].ToString()));
+            }
+            con.Close();
+            return movies;
+        }
 
         public List<MovieCategory> getMovieCategories()
         {
@@ -74,6 +74,19 @@ namespace WebApplication1
             SqlCommand cmd = new SqlCommand("Select ID, Title, Director, Description From Movies Where CategoryID=@catID");
 
             cmd.Parameters.AddWithValue("catID", catID);
+            cmd.Connection = con;
+            con.Open();
+            SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+            return reader;
+        }
+
+        public SqlDataReader getMoviesByTitle(String title)
+        {
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = connectionString;
+            SqlCommand cmd = new SqlCommand("Select ID, Title, Director, Description From Movies Where Title=@title");
+
+            cmd.Parameters.AddWithValue("title", title);
             cmd.Connection = con;
             con.Open();
             SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);

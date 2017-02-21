@@ -78,6 +78,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -99,7 +101,10 @@
     <Content Include="AJAX.aspx" />
     <Content Include="AJAXDemo2.aspx" />
     <Content Include="AJAXDemoUpdateTriggers.aspx" />
+    <Content Include="AjaxDemo_Presenting___.aspx" />
+    <Content Include="AJAXDemo_ProgammaticUpdate.aspx" />
     <Content Include="Calendar.aspx" />
+    <Content Include="Comp235Test2.aspx" />
     <Content Include="DataReaderDemo.aspx" />
     <Content Include="DLLConsumer.aspx" />
     <Content Include="GoMapDemo.aspx" />
@@ -119,10 +124,44 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Repeater.aspx" />
+    <Content Include="ReviewExercise.aspx" />
     <Content Include="ReviewExercise2.aspx" />
     <Content Include="FileUpload.aspx" />
     <Content Include="Schedule.aspx" />
     <Content Include="ListOfMovies.aspx" />
+    <None Include="Service References\Service1\Service1.disco" />
+    <None Include="Service References\Service1\configuration91.svcinfo" />
+    <None Include="Service References\Service1\configuration.svcinfo" />
+    <None Include="Service References\Service1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="webService.aspx" />
+    <None Include="Service References\Service1\Service1.wsdl" />
+    <None Include="Service References\Service1\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service1\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Service1\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\Service1\WebApplication1.Service1.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Service1\WebApplication1.Service1.Equation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Service1\WebApplication1.Service1.Movie.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Service1\WebApplication1.Service1.MovieCategory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Service1\WebApplication1.Service1.Stock.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -162,12 +201,33 @@
     <Compile Include="AJAXDemoUpdateTriggers.aspx.designer.cs">
       <DependentUpon>AJAXDemoUpdateTriggers.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AjaxDemo_Presenting___.aspx.cs">
+      <DependentUpon>AjaxDemo_Presenting___.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxDemo_Presenting___.aspx.designer.cs">
+      <DependentUpon>AjaxDemo_Presenting___.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AJAXDemo_ProgammaticUpdate.aspx.cs">
+      <DependentUpon>AJAXDemo_ProgammaticUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AJAXDemo_ProgammaticUpdate.aspx.designer.cs">
+      <DependentUpon>AJAXDemo_ProgammaticUpdate.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Calendar.aspx.cs">
       <DependentUpon>Calendar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Calendar.aspx.designer.cs">
       <DependentUpon>Calendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comp235Test2.aspx.cs">
+      <DependentUpon>Comp235Test2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comp235Test2.aspx.designer.cs">
+      <DependentUpon>Comp235Test2.aspx</DependentUpon>
     </Compile>
     <Compile Include="DataReaderDemo.aspx.cs">
       <DependentUpon>DataReaderDemo.aspx</DependentUpon>
@@ -236,6 +296,13 @@
     <Compile Include="Repeater.aspx.designer.cs">
       <DependentUpon>Repeater.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ReviewExercise.aspx.cs">
+      <DependentUpon>ReviewExercise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReviewExercise.aspx.designer.cs">
+      <DependentUpon>ReviewExercise.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ReviewExercise1.aspx.cs">
       <DependentUpon>ReviewExercise1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -271,6 +338,11 @@
     <Compile Include="ListOfMovies.aspx.designer.cs">
       <DependentUpon>ListOfMovies.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Service References\Service1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="WeatherReport.cs" />
     <Compile Include="WeatherReportViewer.aspx.cs">
       <DependentUpon>WeatherReportViewer.aspx</DependentUpon>
@@ -280,6 +352,13 @@
       <DependentUpon>WeatherReportViewer.aspx</DependentUpon>
     </Compile>
     <Compile Include="WeatherUtilities.cs" />
+    <Compile Include="webService.aspx.cs">
+      <DependentUpon>webService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="webService.aspx.designer.cs">
+      <DependentUpon>webService.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ToDoList\" />
@@ -293,6 +372,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Service1\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
