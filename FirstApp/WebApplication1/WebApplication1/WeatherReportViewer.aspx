@@ -66,5 +66,5 @@
         </asp:Repeater>
     <div id="map">
     </div>
-    </body>
+</body>
 </html>

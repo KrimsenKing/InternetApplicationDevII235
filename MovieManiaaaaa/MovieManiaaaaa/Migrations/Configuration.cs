@@ -1,6 +1,6 @@
 namespace MovieManiaaaaa.Migrations
 {
-    using MovieManiaaaaa.Models;
+    using Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -10,7 +10,7 @@ namespace MovieManiaaaaa.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(MovieManiaaaaa.Models.MovieDBContext context)

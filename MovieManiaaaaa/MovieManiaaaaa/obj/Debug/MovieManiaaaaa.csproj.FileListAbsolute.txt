@@ -69,3 +69,4 @@ M:\COMP_235_InternetDevII\InternetApplicationDevII235\MovieManiaaaaa\MovieManiaa
 M:\COMP_235_InternetDevII\InternetApplicationDevII235\MovieManiaaaaa\MovieManiaaaaa\obj\Debug\MovieManiaaaaa.pdb
 M:\COMP_235_InternetDevII\InternetApplicationDevII235\MovieManiaaaaa\MovieManiaaaaa\obj\Debug\MovieManiaaaaa.Migrations.Initial.resources
 M:\COMP_235_InternetDevII\InternetApplicationDevII235\MovieManiaaaaa\MovieManiaaaaa\obj\Debug\MovieManiaaaaa.csproj.GenerateResource.Cache
+M:\COMP_235_InternetDevII\InternetApplicationDevII235\MovieManiaaaaa\MovieManiaaaaa\obj\Debug\MovieManiaaaaa.Migrations.DataAnnotations.resources
